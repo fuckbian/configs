@@ -12,7 +12,7 @@ fi
 
 cd ..
 
-chroot sid-chroot cp configs/etc/* /etc
-chroot sid-chroot cp configs/share/* /usr/share
+chroot sid-chroot/etc cp configs/etc/* .
+chroot sid-chroot/usr/share cp configs/share/* .
 
 echo -e "${GREEN}I: Done!${NC}"
