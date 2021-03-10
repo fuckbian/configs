@@ -1,6 +1,7 @@
 #!/bin/bash
 
 
+NC='\033[0m'
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 
@@ -10,7 +11,7 @@ if [[ "$(id -u)" != 0 ]]; then
   exit 1
 fi
 
-cp configs/etc/* /etc
-cp configs/share/* /etc/share
+cp -r configs/etc/* /etc
+cp -r configs/share/* /etc/share
 
 echo -e "${GREEN}I: Done!${NC}"
