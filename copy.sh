@@ -10,9 +10,7 @@ if [[ "$(id -u)" != 0 ]]; then
   exit 1
 fi
 
-cd ..
-
-chroot sid-chroot/etc cp configs/etc/* .
-chroot sid-chroot/usr/share cp configs/share/* .
+cp configs/etc/* /etc
+cp configs/share/* /etc/share
 
 echo -e "${GREEN}I: Done!${NC}"
